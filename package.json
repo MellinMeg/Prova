@@ -1,0 +1,40 @@
+{
+    "private": true,
+    "name": "jumprock_sage",
+    "version": "1.0.0",
+    "description": "",
+    "devDependencies": {
+        "lerna": "^3.22.1"
+    },
+    "engines": {
+        "node": "18"
+    },
+    "dependencies": {
+        "@jumpgroup/trellis-tools": "^2.8.1"
+    },
+    "scripts": {
+        "nv": "echo $npm_package_engines_node",
+        "postinstall": "yarn -s nv > .nvmrc",
+        "kill-all-docker": "[[ ! -z $(docker ps -q) ]] && docker kill $(docker ps -q) || echo ok",
+        "start": "yarn kill-all-docker && docker-compose up",
+        "recreate": "yarn kill-all-docker && docker-compose up --force-recreate --build",
+        "install": "bash setenv.sh",
+        "repo-setup": "trellis-tools local setup-repo && composer install && yarn --cwd web/app/themes/sage composer && yarn sage:install && yarn sage:build",
+        "wp": "docker exec -it jumprock_sage-wordpress wp",
+        "sage:install": "yarn install --cwd web/app/themes/sage",
+        "sage:start": "yarn --cwd web/app/themes/sage dev",
+        "sage:build": "yarn --cwd web/app/themes/sage build",
+        "sage:test": "yarn --cwd web/app/themes/sage test",
+        "sage:doctor": "yarn --cwd web/app/themes/sage doctor",
+        "sage:translate": "yarn --cwd web/app/themes/sage translate",
+        "sage:translate:compile": "yarn --cwd web/app/themes/sage translate:compile",
+        "first-setup-wordpress": "trellis-tools local setup-wordpress",
+        "create-user": "node create-user.js",
+        "deploy-staging": "trellis-tools trellis deploy -e staging",
+        "provision-staging": "trellis-tools trellis provision -e staging",
+        "deploy-production": "trellis-tools trellis deploy -e production",
+        "provision-production": "trellis-tools trellis provision -e production"
+    },
+    "author": "",
+    "license": "UNLICENSED"
+}

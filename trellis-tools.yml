@@ -1,0 +1,3 @@
+buildfolders:
+  - path: "web/app/themes/sage/public"
+    name: "sage"
