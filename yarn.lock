@@ -1217,9 +1217,9 @@
     node-fetch "^3.3.0"
 
 "@jumpgroup/trellis-tools@^2.8.1":
-  version "2.8.1"
-  resolved "https://registry.yarnpkg.com/@jumpgroup/trellis-tools/-/trellis-tools-2.8.1.tgz#ee71283d621f29e680819fd62a59148360c70cff"
-  integrity sha512-tETty/6DGetyHm7hvoljuhQpboplV6aPzGeVpbiNNSjBAIs2BwgB+QVMoiC9JSjgVIhkLsuNHj95RP2gUF9Mzg==
+  version "2.9.7"
+  resolved "https://registry.yarnpkg.com/@jumpgroup/trellis-tools/-/trellis-tools-2.9.7.tgz#7bd7b80c02d8acc264841a18b40875d79c7be755"
+  integrity sha512-qVlurn8kCvt1pWQvXjOWdmXdSJoURysgY4X4kKelMmbRC2wr25SzYh63OZ83cHq15fLIF/Wd6QsGCPDo4X+vxA==
   dependencies:
     "@aws-sdk/client-acm" "^3.441.0"
     "@aws-sdk/client-cloudfront" "^3.369.0"
