@@ -10,7 +10,7 @@
         "node": "18"
     },
     "dependencies": {
-        "@jumpgroup/trellis-tools": "^2.8.1"
+        "@jumpgroup/trellis-tools": "^3.0.4"
     },
     "scripts": {
         "nv": "echo $npm_package_engines_node",
