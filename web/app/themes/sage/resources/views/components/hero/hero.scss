@@ -1,0 +1,36 @@
+.Hero{
+  padding: 3rem var(--lateral-padding);
+  display: flex;
+  gap: 5rem;
+  
+  &__Content {
+    display: flex;
+    gap: 5rem;
+  }
+
+  figure {
+    border-radius: 50vw 50vw 0 0;
+    overflow: hidden;
+    mask-image: radial-gradient(#fff, #000);
+
+    img {
+      object-fit: cover;
+    }
+  }
+  
+  @screen lg{
+    flex-direction: column;
+    padding: 6rem var(--lateral-padding);
+
+    &__Content {
+      & > * {
+        flex: 0 1 50%;
+      }
+    }
+
+    &__Job {
+      text-align: right;
+    } 
+  
+  }
+}

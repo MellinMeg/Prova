@@ -1,17 +1,21 @@
-<a class="sr-only focus:not-sr-only" href="#main">
-	{{ __('Skip to content') }}
-</a>
+<x-header>
+	<x-slot:logo>
+		<h5>Meg Supernova</h5>
+		<span>CMS & FRONTEND DEVELOPER</span>
+	</x-slot:logo>
 
-@include('sections.header')
+	<x-slot:hamburger>
+		{{-- <x-hamburger></x-hamburger> --}}
+	</x-slot:hamburger>
 
-<main id="main" class="main transition-fade">
+	<x-slot:navigation>
+		About
+	</x-slot:navigation>
+
+</x-header>
+
+<main id="main" class="main">
 	@yield('content')
 </main>
-
-@hasSection('sidebar')
-	<aside class="sidebar">
-		@yield('sidebar')
-	</aside>
-@endif
 
 @include('sections.footer')

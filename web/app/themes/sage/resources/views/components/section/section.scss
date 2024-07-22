@@ -1,0 +1,10 @@
+.Section{
+  display: flex;
+  position: relative;
+
+  &__Wrapper {
+    width: 100%;
+    z-index: 1;
+  }
+}
+  

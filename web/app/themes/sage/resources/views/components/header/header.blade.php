@@ -8,10 +8,10 @@
 				{{ $navigation }}
 			</div>
 		@endif
-		@if (!empty($hamburger))
+		{{-- @if (!empty($hamburger))
 			<div class="Header__Hamburger">
 				{{ $hamburger }}
 			</div>
-		@endif
+		@endif --}}
 	</div>
 </header>

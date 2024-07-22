@@ -1,14 +1,18 @@
 /* MEDIA QUERIES */
 @mixin media-from($from) {
+  /* stylelint-disable */
   @media (min-width: $from) {
     @content;
   }
+  /* stylelint-enable */
 }
 
 @mixin media-between($from, $to) {
+  /* stylelint-disable */
   @media (min-width: $from) and (max-width: $to) {
     @content;
   }
+  /* stylelint-enable */
 }
 
 @mixin media-mobile($to) {
@@ -39,6 +43,7 @@
     & {
       font-size: $mob-font-size;
 
+      /* stylelint-disable */
       @media screen and (min-width: $min-vw) {
         font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
       }
@@ -46,17 +51,18 @@
       @media screen and (min-width: $max-vw) {
         font-size: $uw-font-size;
       }
+      /* stylelint-enable */
     }
   }
 }
 
 /* COLOR MAPS */
 @function check-color-map-presence() {
-  @if (global-variable-exists('color-map')==false) {
+  @if (global-variable-exists('color-map') ==false) {
     @error " $color-map is not defined";
   }
 
-  @if (type-of($color-map) !='map') {
+  @if (type-of($color-map) != 'map') {
     @error " $color-map is not a map";
   }
 
@@ -83,7 +89,7 @@
 @mixin add-color-modifiers($default-group: false) {
   $check: check-color-map-presence();
 
-  @if ($default-group !='false') {
+  @if ($default-group != 'false') {
     $use-block-color: $default-group !global;
 
     @content;
@@ -94,7 +100,7 @@
 
     // taking only the key of the group
     @each $key in $group {
-      @if (type-of($key) !='map') {
+      @if (type-of($key) != 'map') {
         // needed because sass varible typing sucks dicks
         $use-block-color: $key !global;
       }
@@ -109,6 +115,7 @@
 
   $use-block-color: '' !global;
 }
+
 /* stylelint-enable */
 
 /* Z-INDEX */
@@ -135,34 +142,36 @@ $blockPrefix: '';
 // e.g. “.prefix-name”
 /* stylelint-disable */
 @mixin block($name) {
-  $this: '.'+#{$blockPrefix}#{$name} !global;
+  $this: '.' + #{$blockPrefix}#{$name} !global;
   $this-class: #{$blockPrefix}#{$name} !global;
 
   .#{$blockPrefix}#{$name} {
     @content;
   }
 }
+
 /* stylelint-enable */
 
 // Inside a block, generates an modifier class selector
 // e.g. “.prefix-name--modifier”
-@mixin block-modifier($name) {
-  &--#{$name} {
-    @content;
+@mixin block-modifier($names...) {
+  @each $name in $names {
+    &--#{$name} {
+      @content;
+    }
   }
 }
 
 // AT ROOT
 
 @mixin at-root($class, $context: false) {
-  $selector: '.'+$class;
+  $selector: '.' + $class;
 
   @if ($context) {
     $selector: #{$context + $selector};
   }
 
-  @if ($this-class and $this-class !='') {
-
+  @if ($this-class and $this-class != '') {
     // we're inside a block
     @at-root {
       #{ $selector } {
@@ -171,9 +180,7 @@ $blockPrefix: '';
         }
       }
     }
-  }
-
-  @else {
+  } @else {
     @at-root {
       #{$selector} {
         @content;
@@ -212,8 +219,9 @@ $blockPrefix: '';
   position: relative;
   display: inline-block;
   text-align: center;
-  font-size: var(--fs-400);
-  line-height: var(--lh-300);
+  font-size: 16px;
+  line-height: var(--lh-400);
+  font-weight: 400;
   border-radius: 5px;
   padding: 0.5rem 1.5rem;
   cursor: pointer;

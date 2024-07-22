@@ -55,7 +55,9 @@
     "require": {
         "php": "^8.0",
         "jumprock_packages/mandatory": "3.0.*",
-        "roots/acorn": "^3.0"
+        "roots/acorn": "^3.0",
+        "wpackagist-plugin/advanced-custom-fields": "^6.3",
+        "wpackagist-plugin/performance-lab": "^3.3"
     },
     "require-dev": {
         "spatie/laravel-ignition": "^1.6"

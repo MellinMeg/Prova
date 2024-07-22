@@ -1,3 +1,9 @@
+# Docker
+docker/db/
+docker/certs/
+docker/nginx/
+docker-compose.yml
+.nvmrc
 node_modules
 
 # Trellis

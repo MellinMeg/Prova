@@ -1,0 +1,56 @@
+p {
+  margin: revert;
+  font-size: var(--fs-body);
+  line-height: var(--lh-400);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: var(--lh-500);
+  font-family: var(--ff-heading);
+  color: var(--clr-primary)
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-weight: var(--fw-regular);
+}
+
+h1 {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-heading-1);
+}
+
+h2 {
+  font-size: var(--fs-heading-2);
+}
+
+h3 {
+  font-size: var(--fs-heading-3);
+}
+
+h4 {
+  font-size: var(--fs-heading-4);
+}
+
+h5 {
+  font-size: var(--fs-heading-5);
+}
+
+.Body {
+  font-size: var(--fs-body);
+  line-height: var(--lh-300);
+}
+
+.BodySmall {
+  font-size: var(--fs-body-small);
+}
+
+.BodyXSmall {
+  font-size: var(--fs-body-xsmall);
+}
