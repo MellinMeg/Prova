@@ -1,7 +1,6 @@
 <x-header>
 	<x-slot:logo>
 		<h5>Meg Supernova</h5>
-		<span>CMS & FRONTEND DEVELOPER</span>
 	</x-slot:logo>
 
 	<x-slot:hamburger>
@@ -9,7 +8,7 @@
 	</x-slot:hamburger>
 
 	<x-slot:navigation>
-		About
+		{{-- <a href="mailto:gregoriferrimargherita@gmail.com">gregoriferrimargherita@gmail.com</a> --}}
 	</x-slot:navigation>
 
 </x-header>

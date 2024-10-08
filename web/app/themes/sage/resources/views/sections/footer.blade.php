@@ -1,3 +1,3 @@
 <div class="Footer">
-	Contattami
+	<x-footer></x-footer>
 </div>

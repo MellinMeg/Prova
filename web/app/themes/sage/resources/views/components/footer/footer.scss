@@ -1,0 +1,21 @@
+.Footer{
+  background-image: url('../../../images/noise.png');
+  color: var(--clr-primary);
+  padding: 3rem var(--lateral-padding);
+
+  &__Wrapper {
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: var(--header-height);
+    padding: 0 var(--lateral-padding);
+  }
+
+  &__Navigation{
+    font-weight: var(--fw-regular);
+  }
+}
+  

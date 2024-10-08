@@ -1,10 +1,12 @@
 .Hero{
   padding: 3rem var(--lateral-padding);
   display: flex;
+  flex-direction: column;
   gap: 5rem;
   
   &__Content {
     display: flex;
+    flex-direction: column;
     gap: 5rem;
   }
 
@@ -19,8 +21,7 @@
   }
   
   @screen lg{
-    flex-direction: column;
-    padding: 6rem var(--lateral-padding);
+    // padding: 6rem var(--lateral-padding);
 
     &__Content {
       & > * {
